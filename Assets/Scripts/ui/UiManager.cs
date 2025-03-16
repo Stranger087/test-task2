@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using addressable;
 using ui.lobby;
+using ui.lobby.start_puzzle;
 using UnityEngine;
 
 namespace ui
@@ -18,11 +19,11 @@ namespace ui
         {
         }
 
-        public void ShowDialogPuzzleStart()
+        public void ShowDialogPuzzleStart(string imageId)
         {
             var prefab = AddressableUtils.LoadImmediately<GameObject>(AddressableKeys.DialogStartPuzzle);
             var dialog = Instantiate(prefab, _dialogsContainer).GetComponent<DialogStartPuzzle>();
-            dialog.Open(null);
+            dialog.Open(imageId);
             _openedDialogs.Add(dialog);
         }
 

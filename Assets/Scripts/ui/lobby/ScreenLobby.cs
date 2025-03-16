@@ -1,24 +1,29 @@
-using System;
 using di;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace ui.lobby
 {
     public class ScreenLobby : BaseScreen
     {
-        [SerializeField] private Button _buttonStartPuzzle;
+        [SerializeField] private WidgetImageVariant[] _selectImageButtons;
         private UiManager _uiManager;
+
 
         private void Awake()
         {
-            _buttonStartPuzzle.onClick.AddListener(HandleStartPuzzleClick);
+            //тут потом будет бесконечная прокрутка картинок с переиспользованием виджетов, чтобы не спавнить сразу 1000
+            for (var i = 0; i < _selectImageButtons.Length; i++)
+            {
+                var iCache = i+1;
+                _selectImageButtons[i].Init(()=> HandleStartPuzzleClick(iCache));
+            }
+
             _uiManager = GlobalContext.Resolve<UiManager>();
         }
 
-        private void HandleStartPuzzleClick()
+        private void HandleStartPuzzleClick(int iCache)
         {
-            _uiManager.ShowDialogPuzzleStart();
+            _uiManager.ShowDialogPuzzleStart(iCache.ToString());
         }
     }
 }
