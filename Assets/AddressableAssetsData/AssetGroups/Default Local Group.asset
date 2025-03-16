@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 35a7742f42b9848a9a030732864bc8c9
+    m_Address: DialogStartPuzzle
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6c19bf6e369f74d3695cd297f0346d88
     m_Address: UiManager
     m_ReadOnly: 0
