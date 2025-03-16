@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using addressable;
-using ui.lobby;
 using ui.lobby.start_puzzle;
 using UnityEngine;
 
@@ -17,6 +16,7 @@ namespace ui
 
         public void Initialize()
         {
+            //todo: preload some frequently used dialogs
         }
 
         public void ShowDialogPuzzleStart(string imageId)

@@ -33,12 +33,10 @@ namespace ui.lobby.start_puzzle
             {
                 childState.SetActive(true);
             }
-            
+
             _priceText.text = priceData.Amount.ToString();
-            
+
             LayoutRebuilder.ForceRebuildLayoutImmediate(_layoutContainer);
         }
-        
-        
     }
 }

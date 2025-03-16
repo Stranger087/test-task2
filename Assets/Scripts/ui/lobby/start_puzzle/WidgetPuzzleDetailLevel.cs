@@ -1,5 +1,6 @@
 using System;
 using game;
+using game.config;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;

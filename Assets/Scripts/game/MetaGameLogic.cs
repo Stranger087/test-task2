@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using game.config;
 using Random = UnityEngine.Random;
 
 namespace game

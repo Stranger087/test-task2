@@ -1,6 +1,6 @@
 using System;
 
-namespace game
+namespace game.config
 {
     [Serializable]
     public class DetailLevelConfig

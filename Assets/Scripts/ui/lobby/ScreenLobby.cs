@@ -5,7 +5,7 @@ namespace ui.lobby
 {
     public class ScreenLobby : BaseScreen
     {
-        [SerializeField] private WidgetImageVariant[] _selectImageButtons;
+        [SerializeField] private WidgetImageSelectItem[] _selectImageButtons;
         private UiManager _uiManager;
 
 

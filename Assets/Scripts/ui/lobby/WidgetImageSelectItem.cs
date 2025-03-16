@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 namespace ui.lobby
 {
-    public class WidgetImageVariant : MonoBehaviour, IPointerClickHandler
+    public class WidgetImageSelectItem : MonoBehaviour, IPointerClickHandler
     {
         private Action _clickCallback;
 

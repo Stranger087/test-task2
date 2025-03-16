@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace di
 {
     //плейсхолдер для DI
-    public class GlobalContext
+    public static class GlobalContext
     {
         private static readonly Dictionary<string, object> Instances = new();
 

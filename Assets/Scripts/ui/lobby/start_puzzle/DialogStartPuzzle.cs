@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using addressable;
 using di;
 using game;
+using game.config;
 using UnityEngine;
 using UnityEngine.UI;
 using utils;
@@ -21,7 +22,7 @@ namespace ui.lobby.start_puzzle
         private MetaGameLogic _metaGameLogic;
         private int _selectedDetailLevelIndex;
 
-        private List<WidgetPuzzleDetailLevel> _detailLevelWidgets = new();
+        private readonly List<WidgetPuzzleDetailLevel> _detailLevelWidgets = new();
         private UiManager _uiManager;
         private PuzzleConfig _config;
 
@@ -66,6 +67,7 @@ namespace ui.lobby.start_puzzle
             for (var i = 0; i < _config.DetailLevels.Count; i++)
             {
                 var detailLevel = _config.DetailLevels[i];
+                //todo: pooling
                 var detailLevelWidget = Instantiate(detailLevelPrefab, _detailLevelsContainer).GetComponent<WidgetPuzzleDetailLevel>();
                 detailLevelWidget.SetData(detailLevel, i, HandleDetailLevelClick);
                 _detailLevelWidgets.Add(detailLevelWidget);
